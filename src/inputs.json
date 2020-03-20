@@ -1,4 +1,5 @@
 {
+  "branches": "branches",
   "branch": "branch",
   "semantic_version": "semantic_version",
   "extra_plugins": "extra_plugins",
