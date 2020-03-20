@@ -8,6 +8,7 @@ const inputs = require('./inputs.json');
 exports.handleBranchOption = () => {
   const branchOption = {};
   const branch = core.getInput(inputs.branch);
+  const branches = core.getInput(inputs.branches);
 
   if (!branch) {
     return branchOption;
@@ -20,7 +21,7 @@ exports.handleBranchOption = () => {
   if (semanticMajorVersion < 16) {
     branchOption.branch = branch;
   } else {
-    branchOption.branches = [branch];
+    branchOption.branches = branches || [branch];
   }
 
   return branchOption;
